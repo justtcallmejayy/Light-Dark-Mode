@@ -1,1 +1,37 @@
 /* Style file for Light Mode -> Dark Mode */
+/* Below is the code for root page */
+
+:root{
+    /* Set initial color scheme */
+    --base-color: whitesmoke;
+    --text-color: #111528;
+    --base-variant: #e8e9ed;
+    --secondary-color: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+/* Dark Mode */
+.darkMode{
+        --base-color: #070b1d;
+    --text-color: #fff;
+    --base-variant: #101425;
+    --secondary-color: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Code for HTML page template*/
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: var(--base-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
