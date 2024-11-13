@@ -1,73 +1,78 @@
-/* Style file for Light Mode -> Dark Mode */
-/* Below is the code for root page */
-
 :root {
-  /* Set initial color scheme */
-  --base-color: whitesmoke;
-  --text-color: #111528;
+  --base-color: white;
   --base-variant: #e8e9ed;
-  --secondary-color: #232738;
+  --text-color: #111528;
+  --secondary-text: #232738;
   --primary-color: #3a435d;
   --accent-color: #0071ff;
 }
-
-/* Dark Mode */
-.darkMode {
+.darkmode {
   --base-color: #070b1d;
-  --text-color: #fff;
   --base-variant: #101425;
-  --secondary-color: #a4a5b8;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
   --primary-color: #3a435d;
   --accent-color: #0071ff;
 }
-
 * {
   margin: 0;
   padding: 0;
 }
-/* Code for HTML page template*/
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 body {
+  min-height: 100vh;
   background-color: var(--base-color);
   color: var(--text-color);
-  min-height: 100vh;
 }
- 
-.cta-button{
-    background-color: var(--accent-color);
+header,
+section {
+  padding: 70px min(50px, 7%);
 }
-
-#theme-switch{
+section {
+  background-color: var(--base-variant);
+}
+p {
+  margin: 10px 0 20px 0;
+  color: var(--secondary-text);
+}
+button {
+  border: none;
+  padding: 0.8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cta-button {
+  background-color: var(--accent-color);
+}
+#theme-switch {
   height: 50px;
   width: 50px;
   padding: 0;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: var(--base-variant);
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  right: 20px;
   top: 20px;
+  right: 20px;
 }
-
-#theme-switch svg{
+#theme-switch svg {
   fill: var(--primary-color);
 }
-
-/* Below is the code for last child measn the sun icon /lightmode */
-#theme-switch svg:last-child{
+#theme-switch svg:last-child {
   display: none;
 }
-
-.darkmode #theme-switch svg:first-child{
+.darkmode #theme-switch svg:first-child {
   display: none;
 }
-
-.darkmode #theme-switch svg:last-child{
+.darkmode #theme-switch svg:last-child {
   display: block;
 }
