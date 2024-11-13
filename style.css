@@ -1,37 +1,73 @@
 /* Style file for Light Mode -> Dark Mode */
 /* Below is the code for root page */
 
-:root{
-    /* Set initial color scheme */
-    --base-color: whitesmoke;
-    --text-color: #111528;
-    --base-variant: #e8e9ed;
-    --secondary-color: #232738;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
+:root {
+  /* Set initial color scheme */
+  --base-color: whitesmoke;
+  --text-color: #111528;
+  --base-variant: #e8e9ed;
+  --secondary-color: #232738;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
 }
 
 /* Dark Mode */
-.darkMode{
-        --base-color: #070b1d;
-    --text-color: #fff;
-    --base-variant: #101425;
-    --secondary-color: #a4a5b8;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
+.darkMode {
+  --base-color: #070b1d;
+  --text-color: #fff;
+  --base-variant: #101425;
+  --secondary-color: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 /* Code for HTML page template*/
-html{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body{
-    background-color: var(--base-color);
-    color: var(--text-color);
-    min-height: 100vh;
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+ 
+.cta-button{
+    background-color: var(--accent-color);
+}
+
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 100%;
+  background-color: var(--base-variant);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+
+/* Below is the code for last child measn the sun icon /lightmode */
+#theme-switch svg:last-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+  display: block;
 }
