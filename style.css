@@ -1,21 +1,21 @@
 /* Root Variables for light and dark mode */
 :root {
-  --base-color: white;
-  --base-variant: #e8e9ed;
-  --text-color: #111528;
-  --secondary-text: #232738;
-  --primary-color: #3a435d;
-  --accent-color: #0071ff;
+  --base-color: #FDF0D5; /* Light cream */
+  --base-variant: #e8e9ed; /* Light grayish background */
+  --text-color: #003049; /* Dark navy blue for text */
+  --secondary-text: #669BBC; /* Soft blue for secondary text */
+  --primary-color: #780000; /* Deep red for main accents */
+  --accent-color: #C1121F; /* Bright red for highlights */
   --transition-speed: 0.3s;
 }
 
 .darkmode {
-  --base-color: #070b1d;
-  --base-variant: #101425;
-  --text-color: #ffffff;
-  --secondary-text: #a4a5b8;
-  --primary-color: #3a435d;
-  --accent-color: #0071ff;
+  --base-color: #070b1d; /* Dark background */
+  --base-variant: #101425; /* Darker variant */
+  --text-color: #FDF0D5; /* Light cream for text */
+  --secondary-text: #a4a5b8; /* Soft gray for secondary text */
+  --primary-color: #780000; /* Keep the deep red for contrast */
+  --accent-color: #C1121F; /* Bright red for accents */
 }
 
 /* Global Styles */
@@ -49,20 +49,20 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Deep red for heading */
   margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.1rem;
-  color: var(--secondary-text);
+  color: var(--secondary-text); /* Soft blue for paragraph text */
   margin-bottom: 20px;
 }
 
 header button {
   border: none;
   padding: 0.8em 2em;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Deep red for button background */
   color: white;
   border-radius: 4px;
   font: inherit;
@@ -73,12 +73,12 @@ header button {
 }
 
 header .cta-button {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color); /* Bright red for CTA button */
   margin-right: 15px;
 }
 
 header button:hover {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color); /* Bright red on hover */
 }
 
 #theme-switch {
@@ -98,7 +98,7 @@ header button:hover {
 }
 
 #theme-switch svg {
-  fill: var(--primary-color);
+  fill: var(--primary-color); /* Deep red for the SVG icon */
 }
 
 #theme-switch svg:last-child {
@@ -121,19 +121,19 @@ section {
 
 section h2 {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Deep red for section headings */
   margin-bottom: 20px;
 }
 
 section p {
   font-size: 1.1rem;
-  color: var(--secondary-text);
+  color: var(--secondary-text); /* Soft blue for paragraph text */
   margin-bottom: 20px;
 }
 
 section button {
   padding: 1em 2.5em;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Deep red for section button */
   color: white;
   border-radius: 4px;
   font: inherit;
@@ -144,7 +144,58 @@ section button {
 }
 
 section button:hover {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color); /* Bright red on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color); /* Deep red footer background */
+  color: var(--base-color); /* Light cream text for contrast */
+  padding: 40px 15px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 1.2rem;
+  color: var(--base-color); /* Light cream color for copyright text */
+  margin-bottom: 20px;
+}
+
+footer .social-links {
+  margin-bottom: 20px;
+}
+
+footer .social-links a {
+  color: var(--secondary-text); /* Soft blue for social links */
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer .social-links a:hover {
+  color: var(--accent-color); /* Bright red on hover */
+}
+
+footer .footer-links a {
+  color: var(--base-color); /* Light cream color for footer links */
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer .footer-links a:hover {
+  color: var(--accent-color); /* Bright red on hover */
+}
+
+footer .footer-links {
+  margin-top: 20px;
 }
 
 /* Responsive Layout */
@@ -163,5 +214,9 @@ section button:hover {
 
   section h2 {
     font-size: 1.5rem;
+  }
+
+  footer {
+    padding: 30px 15px;
   }
 }
