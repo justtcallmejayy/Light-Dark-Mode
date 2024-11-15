@@ -1,35 +1,13 @@
-// Script file for Light mode -> Dark Mode
+let darkmode = localStorage.getItem('darkmode');
+const themeSwitch = document.getElementById('theme-switch');
 
-let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('theme-switch')
+const toggleDarkMode = () => {
+  const isDark = document.body.classList.toggle('darkmode');
+  localStorage.setItem('darkmode', isDark ? 'active' : null);
+};
 
-// function for both start and end darkmode states
-
-function startDarkMode(){
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode', 'active')
-    // themeSwitch.innerHTML = "Switch to Light Mode"
-
+if (darkmode === 'active') {
+  document.body.classList.add('darkmode');
 }
 
-function endDarkMode() {
-    document.body.classList.remove('darkmode')
-    localStorage.setItem('darkmode', null)
-}
-
-if (darkmode==='active') {
-    startDarkMode()
-    
-}
-
-// check if the user has previously selected dark mode
-
-themeSwitch.addEventListener("click", ()=>{
-    let darkmode = localStorage.getItem('darkmode')
-// adding a good written conditionl statment using expressions
-darkmode !== "active"? startDarkMode() : endDarkMode()
-
-// the colon here means else statement
- 
-
-})
+themeSwitch.addEventListener('click', toggleDarkMode);
